@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Car{
+            fulltank=100;
+            constructor(power,fuel){
+                this._power=power;
+                this._fuel=fuel;
+                //_power means that it is protected, and can be accessed only by 
+                //the getter and setter function.
+            }
+            get power(){
+                return `${this._power}hp`;
+            }
+
+            get fuel(){
+                return `${this._fuel}L (${this._fuel*100/this.fulltank}%)`;
+            }
+
+            set fuel(value){
+                this._fuel=value;
+            }
+        }
+        car=new Car(600,40);
+        console.log(car.power);
+        console.log(car.fuel);
+        car.fuel=80;
+        console.log("after fulling the tank, ");
+        console.log(car.fuel);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

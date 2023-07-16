@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Animal{
+            speed=undefined;
+            constructor(name,age,alive){
+                this.name=name;
+                this.age=age;
+                this.alive=alive;
+            }
+            print=()=>{console.log(`${this.name} ${this.age} ${this.alive} ${this.speed}`)};
+        }
+
+        class Rabbit extends Animal{
+            constructor(name,age,alive,runspeed){
+                super(name,age,alive);
+                this.runspeed=runspeed;
+                this.speed=runspeed;
+            }
+        }
+
+        class Hawk extends Animal{
+            constructor(name,age,alive,flyingspeed){
+                super(name,age,alive);
+                this.flying=flyingspeed;
+                this.speed=flyingspeed;
+            }
+
+        }
+        rabbit=new Rabbit("rabbit",1,true,10);
+        hawk=new Hawk("hawk",2,false,200);
+        rabbit.print();
+        hawk.print();
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

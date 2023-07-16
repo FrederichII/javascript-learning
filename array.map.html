@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 用forEach实现数组元素平方
+        // numbers=[1,2,3,4,5];
+        // function square(element,index,array){
+        //     array[index]=Math.pow(element,2);
+        // }
+        // numbers.forEach(square);
+        // function print(element){
+        //     console.log(element)
+        // }
+        // numbers.forEach(print);
+        //
+
+        
+        //用map实现数组元素平方
+        numbers=[1,2,3,4,5];
+        function square(element,index,array){
+         return Math.pow(element,2);
+        }
+        squares=numbers.map(square);
+        console.log(squares);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

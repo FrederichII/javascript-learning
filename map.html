@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const store=new Map([
+            ["shirts",40],
+            ["jeans",30],
+            ["socks",20],
+            ["underwear",10]]
+        );
+        let shoppingCart=0;
+        shoppingCart+=store.get("shirts");
+        shoppingCart+=store.get("jeans");
+        console.log(`you gotta pay: $${shoppingCart}`);
+
+        store.set("hat",30);
+        store.delete("hat");
+        console.log(store.has("hat"));
+        console.log(store.size);
+
+        store.forEach((value,key)=>console.log(`${key} $${value}`));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

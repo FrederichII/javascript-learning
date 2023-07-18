@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        //async keyword, make a function return a Promise
+        
+      async function loadFile() {
+        let fileloaded = false;
+
+        if (fileloaded) {
+          return ("File loaded");
+        } else {
+          return ("File NOT loaded");
+        }
+      }
+
+      loadFile()
+        .then((value) => console.log(value))
+        .catch((error) => console.log(error));
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="radio" name="fruits" value="apple" >
+    <label for="apple">apple</label>
+    <input type="radio" name="fruits" value="orange" checked="checked">
+    <label for="orange">orange</label>
+    <input type="radio" name="fruits" value="banana">
+    <label for="banana">banana</label>
+    <h1 id="my title">This is the MENU</h1>
+    <ul>
+        <li>carrots</li>
+        <li>potatoes</li>
+        <li>onions</li>
+    </ul>
+
+    <div class="desserts">ice cream</div>
+    <div class="desserts">cake</div>
+    <div class="desserts">pie</div>
+
+    <script>
+        // let element=document.getElementById("my title");
+        // element.style.backgroundColor = "lightgreen";
+
+        let fruits = document.getElementsByName("fruits");
+        console.log(fruits[0].value);
+
+        fruits.forEach(fruit =>{
+            if(fruit.checked){
+                console.log(fruit.value)
+            }
+        })
+        let desserts = document.getElementsByClassName("desserts");
+        desserts[2].style.backgroundColor = "lightblue";
+
+        let element = document.querySelector("#my title");
+        element=document.querySelector(".desserts");
+        element=document.querySelector("[for]");
+        elements=document.querySelectorAll("li");
+        let vegetables = document.getElementsByTagName("li");
+        vegetables[0].style.backgroundColor = "lightgreen";
+    </script>
+</body>
+</html>

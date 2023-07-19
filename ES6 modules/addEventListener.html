@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="outerDiv" style="background-color: lightgreen;width: 200px;
+    height: 200px;border: 1px,solid;"><div id="innerDiv" style="background-color: lightgreen;width: 100px;
+    height: 100px;border: 1px,solid;"></div></div>
+    <script>
+        const innerDiv = document.getElementById("innerDiv");
+        const outerDiv = document.getElementById("outerDiv");
+        // innerDiv.addEventListener("mouseover",changeRed);
+        // innerDiv.addEventListener("mouseout",changeGreen);
+        // function changeRed(){
+        //     innerDiv.style.backgroundColor="red";
+        // }
+        // function changeGreen(){
+        //     innerDiv.style.backgroundColor="green";
+        // }
+        innerDiv.addEventListener("click",changeBlue);
+        outerDiv.addEventListener("click",changeBlue ,true);
+        //addEventListener(event, function callback, useCapture (true/false))
+
+        function changeBlue(){
+            alert("you selected"+this.id)
+            this.style.backgroundColor = "lightblue";
+        }
+    </script>
+</body>
+</html>

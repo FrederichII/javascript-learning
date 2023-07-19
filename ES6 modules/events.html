@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="myButton" >button</button>
+    <div id="myDiv" style="height: 100px;
+    width: 100px;background-color: lightgreen;"></div>
+    <input type="text" name="" id="myText">
+    <script>
+        function doSomething(){
+            alert("did something");
+        }
+        // const element = document.getElementById("myButton");
+        // element.onclick = doSomething;
+        const element =document.body;
+        element.onload = doSomething;
+        document.onchange = doSomething;
+        const text = document.getElementById("myText");
+        text.onchange = doSomething;
+        const div = document.getElementById("myDiv");
+        div.onmouseover = changeColor;
+        div.onmouseleave = () => {div.style.backgroundColor = "lightgreen"};
+        function changeColor(){
+            div.style.backgroundColor = "lightblue";
+        }
+        div.onmousedown = changeColor;
+        div.onmouseup = () => {div.style.backgroundColor = "lightgreen"};
+    </script>
+</body>
+</html>

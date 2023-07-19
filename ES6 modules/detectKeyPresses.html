@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: lightgreen;
+            position: relative;
+            border: 1px,solid;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="div">
+    </div>
+    <script>
+        let x=0 , y = 0;
+        // window.addEventListener("keydown",(event)=>{console.log(event.key)})
+        window.addEventListener("keydown", move)
+        function move(event){
+            switch(event.key){
+                case "ArrowDown":y+=5;break;
+                case "ArrowUp":y-=5;break;
+                case "ArrowLeft":x-=5;break;
+                case "ArrowRight":x+=5;break;
+            }
+            console.log(event.key+` (${x},${y})`);
+            
+            document.getElementById("div").style.top = y + "px";
+            document.getElementById("div").style.left =x + "px";
+        }
+    </script>
+</body>
+</html>
